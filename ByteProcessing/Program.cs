@@ -43,6 +43,9 @@ namespace ByteProcessing
                 byte[] subImage = new byte[subImageSize];
                 Array.Copy(image, i * (length / 4), subImage, 0, subImageSize);
 
+                //You can save those subImage as file if needs
+                Console.WriteLine("Splitted image:{0}", i);
+
                 // Peek some bytes within the sub-image
                 // Your processing logic goes here
                 await Task.Delay(10); // Processing delay

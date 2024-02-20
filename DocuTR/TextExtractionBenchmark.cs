@@ -1,5 +1,7 @@
 ﻿using NBench;
 using System.Diagnostics;
+using System.Runtime.Intrinsics.X86;
+using System.Text.RegularExpressions;
 
 namespace DocuTR
 {
@@ -30,6 +32,17 @@ namespace DocuTR
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
             int count = CountOccurrences(_concatenatedText, SearchString);
+            stopwatch.Stop();
+            Console.WriteLine($"Search string found {count} times.");
+            Console.WriteLine($"Time taken: {stopwatch.Elapsed.TotalMilliseconds} milliseconds");
+        }
+
+        [PerfBenchmark(Description = "Benchmark search with Regex.", NumberOfIterations = 5, RunMode = RunMode.Iterations, TestMode = TestMode.Measurement)]
+        [CounterMeasurement("Search Time")]
+        public void SearchBenchmarkRegEx(BenchmarkContext context)
+        {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            int count = CountOccurrencesWithRegEx(_concatenatedText, SearchString);
             stopwatch.Stop();
             Console.WriteLine($"Search string found {count} times.");
             Console.WriteLine($"Time taken: {stopwatch.Elapsed.TotalMilliseconds} milliseconds");
@@ -72,6 +85,13 @@ namespace DocuTR
                 count++;
             }
             return count;
+        }
+
+        private int CountOccurrencesWithRegEx(string input, string searchString)
+        {
+            // Use regex to count occurrences of the search string
+            Regex regex = new Regex(Regex.Escape(searchString));
+            return regex.Matches(input).Count;
         }
     }
 }
