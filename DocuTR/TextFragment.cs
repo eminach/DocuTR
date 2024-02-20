@@ -1,4 +1,4 @@
-﻿namespace DocuTR.TextExtractionBenchmark
+﻿namespace DocuTR
 {
     public class TextFragment
     {

@@ -1,7 +1,7 @@
 ﻿using NBench;
 using System.Diagnostics;
 
-namespace DocuTR.TextExtractionBenchmark
+namespace DocuTR
 {
     public class TextExtractionBenchmark
     {

@@ -11,7 +11,7 @@ namespace DocuTR
     {
         static int Main(string[] args)
         {
-            return NBenchRunner.Run<TextExtractionBenchmark.TextExtractionBenchmark>();
+            return NBenchRunner.Run<TextExtractionBenchmark>();
         }
     }
 }

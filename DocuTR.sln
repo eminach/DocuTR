@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocuTR", "DocuTR\DocuTR.csproj", "{FA1D5C24-3C1B-41D0-BB30-28C9F5C4FE4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteProcessing", "ByteProcessing\ByteProcessing.csproj", "{D2A4502E-09FB-42D9-BBBD-14E609224330}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FA1D5C24-3C1B-41D0-BB30-28C9F5C4FE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA1D5C24-3C1B-41D0-BB30-28C9F5C4FE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA1D5C24-3C1B-41D0-BB30-28C9F5C4FE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A4502E-09FB-42D9-BBBD-14E609224330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A4502E-09FB-42D9-BBBD-14E609224330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A4502E-09FB-42D9-BBBD-14E609224330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A4502E-09FB-42D9-BBBD-14E609224330}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
